@@ -112,7 +112,7 @@ const Home = () => {
         </Fade>
       </Fade>
 
-      <PopupWidget />
+      {/* <PopupWidget /> */}
     </>
   );
 };
