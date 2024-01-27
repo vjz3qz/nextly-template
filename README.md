@@ -61,8 +61,10 @@ Surjith S M ( [@surjithctly](https://surjithctly.in/) )
 
 ## TODO
 
-add video demo
 make sure support button is working
+make sure email subscribe is working
+add video demo
+expand faq
 add terms, privacy, and legal pages
 add testimonials
 add nav bar
