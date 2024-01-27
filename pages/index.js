@@ -63,7 +63,7 @@ const Home = () => {
       <Hero />
       <SectionTitle
         pretitle="Trace AI"
-        title="Use AI to get approvals the first time"
+        title="Use AI to Get Approvals the First Time"
       >
         Spend less time on paperwork by letting Trace AI handle insurance policy
         research and medical neccesity write-ups.
