@@ -99,10 +99,10 @@ const Navbar = () => {
                       </Link>
                     ))}
                     <Link
-                      href="/"
+                      href="https://calendly.com/rahulkm-s7s/30min"
                       className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
                     >
-                      Sign up for
+                      Book a Demo Today
                     </Link>
                   </>
                 </Disclosure.Panel>
