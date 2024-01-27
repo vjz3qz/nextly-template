@@ -11,8 +11,43 @@ import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
+import { useEffect } from "react";
 
 const Home = () => {
+  // Function to set the favicon based on the user's theme
+  const setFavicon = (theme) => {
+    const favicon = document.querySelector('link[rel="icon"]');
+    if (theme === "dark") {
+      favicon.href = "/img/removed_white_favicon.ico";
+    } else {
+      favicon.href = "/img/removed_black_favicon.ico";
+    }
+  };
+
+  // Call the setFavicon function with the user's theme
+  const setUserTheme = () => {
+    const prefersDarkMode = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    let userTheme;
+
+    if (prefersDarkMode) {
+      // Nighttime
+      userTheme = "dark";
+    } else {
+      // Daytime
+      userTheme = "light";
+    }
+
+    setFavicon(userTheme); // Call the setFavicon function with the user's theme
+  };
+
+  // Call the setUserTheme function when the component mounts
+  useEffect(() => {
+    setUserTheme();
+  }, []);
+
   return (
     <>
       <Head>

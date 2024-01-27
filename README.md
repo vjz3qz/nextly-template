@@ -62,8 +62,7 @@ Surjith S M ( [@surjithctly](https://surjithctly.in/) )
 ## TODO
 
 add video demo
-add nav bar
-add testimonials
-add removed background logos and favicons
-add terms, privacy, and legal pages
 make sure support button is working
+add terms, privacy, and legal pages
+add testimonials
+add nav bar
