@@ -35,22 +35,17 @@ const Faq = () => {
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question: "Do you store patient data?",
+    answer: "We never store any patient data. After we process your request, we delete all records.",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "Do you cover multiple insurances?",
+    answer: "Yes, our insurance policy knowledge base covers medical policies from the most common insurance providers.",
   },
   {
-    question: "What is your refund policy? ",
+    question: "Do you offer technical support?",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
-  },
-  {
-    question: "Do you offer technical support? ",
-    answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Yes, a member of our team will be available to support you 7 days a week.",
   },
 ];
 

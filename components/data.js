@@ -7,50 +7,50 @@ import {
   SunIcon,
 } from "@heroicons/react/24/solid";
 
-import benefitOneImg from "../public/img/benefit-one.png";
-import benefitTwoImg from "../public/img/benefit-two.png";
+import benefitOneImg from "../public/img/automation.svg";
+import benefitTwoImg from "../public/img/locker.png";
 
 const benefitOne = {
-  title: "Highlight your benefits",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  title: "Rapidly understand insurance policies",
+  desc: "Let us search and summarize your complex insurance policies so you can spend more time with patients.",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
+      title: "Requirement checker",
+      desc: "See what criteria your patient meets in a matter of seconds.",
       icon: <FaceSmileIcon />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
+      title: "Reliable source material ",
+      desc: "We pull information straight from insurance policies and give you the source material.",
       icon: <ChartBarSquareIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
+      title: "Automated letter writing",
+      desc: "Tell us about the patient and let us argue medical neccesity.",
       icon: <CursorArrowRaysIcon />,
     },
   ],
 };
 
 const benefitTwo = {
-  title: "Offer more benefits here",
-  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+  title: "Keep your medical documents organized",
+  desc: "Have your entire knowledge base at your fingertips. Spend less time searching for information and more time using it.",
   image: benefitTwoImg,
   bullets: [
     {
-      title: "Mobile Responsive Template",
-      desc: "Nextly is designed as a mobile first responsive template.",
+      title: "Rapid semantic search",
+      desc: "Search using ideas, codes, or terminology and immediatley get the specific information you need.",
       icon: <DevicePhoneMobileIcon />,
     },
     {
-      title: "Powered by Next.js & TailwindCSS",
-      desc: "This template is powered by latest technologies and tools.",
+      title: "Pre-built policy database",
+      desc: "Leverage Trace AI's insurance policy and form database to find documents scattered across the web.",
       icon: <AdjustmentsHorizontalIcon />,
     },
     {
-      title: "Dark & Light Mode",
-      desc: "Nextly comes with a zero-config light & dark mode. ",
+      title: "Add your own documents",
+      desc: "Easily upload your own documents and find information whenever you need",
       icon: <SunIcon />,
     },
   ],

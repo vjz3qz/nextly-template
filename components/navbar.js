@@ -29,17 +29,17 @@ const Navbar = () => {
             <>
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                 <Link href="/">
-                  <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
+                  <span className="flex items-center space-x-2 text-2xl font-medium dark:text-gray-100">
                     <span>
                       <Image
-                        src="/img/logo.svg"
+                        src="/img/logo.jpeg"
                         alt="N"
-                        width="32"
-                        height="32"
+                        width="48"
+                        height="48"
                         className="w-8"
                       />
                     </span>
-                    <span>Nextly</span>
+                    <span>Trace AI</span>
                   </span>
                 </Link>
 
@@ -83,7 +83,7 @@ const Navbar = () => {
                       href="/"
                       className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
                     >
-                      Get Started
+                      Sign up for 
                     </Link>
                   </>
                 </Disclosure.Panel>
@@ -110,10 +110,10 @@ const Navbar = () => {
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link
-            href="/"
+            href="https://calendly.com/rahulkm-s7s"
             className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
           >
-            Get Started
+            Sign up for a demo
           </Link>
 
           <ThemeChanger />

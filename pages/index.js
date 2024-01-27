@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
+        <title>Trace AI - Prior Auth Copilot</title>
         <meta
           name="description"
           content="Nextly is a free landing page template built with next.js & Tailwind CSS"
@@ -27,24 +27,23 @@ const Home = () => {
       <Navbar />
       <Hero />
       <SectionTitle
-        pretitle="Nextly Benefits"
-        title=" Why should you use this landing page"
+        pretitle="Trace AI"
+        title="Use AI to get approvals the first time"
       >
-        We leverages AI to provide a comprehensive suite of tools for managing
-        insurance guidelines, analyzing prior authorization requests, handling
-        insurance phone calls, and more.
+        Spend less time on paperwork by letting Trace AI handle insurance policy research
+        and medical neccesity write-ups.
       </SectionTitle>
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
-      <SectionTitle
+      {/* <SectionTitle
         pretitle="Watch a video"
         title="Learn how to fullfil your needs"
       >
         This section is to highlight a promo or demo video of your product.
         Analysts says a landing page with video has 3% more conversion rate. So,
         don&apos;t forget to add one. Just like this.
-      </SectionTitle>
-      <Video />
+      </SectionTitle> */}
+      {/* <Video /> */}
       {/* <SectionTitle
         pretitle="Testimonials"
         title="Here's what our customers said"
@@ -54,11 +53,9 @@ const Home = () => {
       </SectionTitle>
       <Testimonials /> */}
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
       </SectionTitle>
       <Faq />
-      <Cta />
+      {/* <Cta /> */}
       <Footer />
       <PopupWidget />
     </>

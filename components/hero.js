@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Container from "./container";
-import heroImg from "../public/img/hero.png";
+import heroImg from "../public/img/stethescope.svg";
 
 const Hero = () => {
   return (
@@ -12,9 +12,8 @@ const Hero = () => {
               AI Copilot for Prior Authorizations
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
-              We leverages AI to provide a comprehensive suite of tools for
-              managing insurance guidelines, analyzing prior authorization
-              requests, handling insurance phone calls, and more.
+              At Trace AI, we're using cutting-edge generative AI technology to help physcians and medical staff 
+              improve insurance interactions.
             </p>
 
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
@@ -58,7 +57,6 @@ const Hero = () => {
               className={"object-cover"}
               alt="Hero Illustration"
               loading="eager"
-              placeholder="blur"
             />
           </div>
         </div>
