@@ -19,31 +19,36 @@ const PopupWidget = () => {
 
   const onSubmit = async (data, e) => {
     console.log(data);
-    await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(data, null, 2),
-    })
-      .then(async (response) => {
-        let json = await response.json();
-        if (json.success) {
-          setIsSuccess(true);
-          setMessage(json.message);
-          e.target.reset();
-          reset();
-        } else {
-          setIsSuccess(false);
-          setMessage(json.message);
-        }
-      })
-      .catch((error) => {
-        setIsSuccess(false);
-        setMessage("Client Error. Please check the console.log for more info");
-        console.log(error);
-      });
+    const name = data.name;
+    const email = data.email;
+    const message = data.message;
+    console.log(name, email, message);
+
+    // await fetch("https://api.web3forms.com/submit", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Accept: "application/json",
+    //   },
+    //   body: JSON.stringify(data, null, 2),
+    // })
+    //   .then(async (response) => {
+    //     let json = await response.json();
+    //     if (json.success) {
+    //       setIsSuccess(true);
+    //       setMessage(json.message);
+    //       e.target.reset();
+    //       reset();
+    //     } else {
+    //       setIsSuccess(false);
+    //       setMessage(json.message);
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     setIsSuccess(false);
+    //     setMessage("Client Error. Please try again later.");
+    //     console.log(error);
+    //   });
   };
 
   return (
@@ -111,9 +116,12 @@ const PopupWidget = () => {
             >
               <Disclosure.Panel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
                 <div className="flex flex-col items-center justify-center h-32 p-5 bg-indigo-600">
-                  <h3 className="text-lg text-white">How can we help?</h3>
-                  <p className="text-white opacity-50">
-                    We usually respond in a few hours
+                  <h3 className="text-lg text-white text-center">
+                    Have any questions?
+                  </h3>
+                  <p className="text-white opacity-50 text-center">
+                    Send us a message and we will get back to you as soon as
+                    possible!
                   </p>
                 </div>
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 dark:bg-gray-800">
@@ -260,7 +268,7 @@ const PopupWidget = () => {
                           )}
                         </button>
                       </div>
-                      <p
+                      {/* <p
                         className="text-xs text-center text-gray-400"
                         id="result"
                       >
@@ -275,7 +283,7 @@ const PopupWidget = () => {
                             Web3Forms
                           </a>
                         </span>
-                      </p>
+                      </p> */}
                     </form>
                   )}
 
