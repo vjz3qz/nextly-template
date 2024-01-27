@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start"
   },
   "repository": {
@@ -21,7 +21,7 @@
   "license": "ISC",
   "dependencies": {
     "@emotion/css": "^11.10.6",
-    "@emotion/react": "^11.10.6",
+    "@emotion/react": "^11.11.3",
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.6",
     "@headlessui/react": "^1.7.14",
@@ -31,6 +31,7 @@
     "next": "^13.3.1",
     "next-themes": "^0.2.1",
     "react": "^18",
+    "react-awesome-reveal": "^4.2.7",
     "react-dom": "^18",
     "react-hook-form": "^7.43.9"
   },

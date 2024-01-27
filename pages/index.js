@@ -12,6 +12,7 @@ import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 import { useEffect } from "react";
+import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
   // Function to set the favicon based on the user's theme
@@ -59,15 +60,26 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
-      <Hero />
-      <SectionTitle
-        pretitle="Trace AI"
-        title="Use AI to Get Approvals the First Time"
-      >
-        Spend less time on paperwork by letting Trace AI handle insurance policy
-        research and medical neccesity write-ups.
-      </SectionTitle>
+      <Fade triggerOnce={true} delay={290}>
+        <Fade direction="down" triggerOnce={true}>
+          <Navbar />
+        </Fade>
+      </Fade>
+
+      <Fade triggerOnce={true} delay={290}>
+        <Fade direction="up" triggerOnce={true}>
+          <Hero />
+        </Fade>
+      </Fade>
+      <Fade fraction={1} triggerOnce={true}>
+        <SectionTitle
+          pretitle="Trace AI"
+          title="Use AI to Get Approvals the First Time"
+        >
+          Spend less time on paperwork by letting Trace AI handle insurance
+          policy research and medical neccesity write-ups.
+        </SectionTitle>
+      </Fade>
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
       {/* <SectionTitle
@@ -87,13 +99,19 @@ const Home = () => {
         Use this section to highlight your popular customers.
       </SectionTitle>
       <Testimonials /> */}
-      <SectionTitle
-        pretitle="FAQ"
-        title="Frequently Asked Questions"
-      ></SectionTitle>
-      <Faq />
-      <Cta />
-      <Footer />
+
+      <Fade triggerOnce={true} delay={300} fraction={0.3}>
+        <Fade direction="up" triggerOnce={true} fraction={0.2}>
+          <SectionTitle
+            pretitle="FAQ"
+            title="Frequently Asked Questions"
+          ></SectionTitle>
+          <Faq />
+          <Cta />
+          <Footer />
+        </Fade>
+      </Fade>
+
       <PopupWidget />
     </>
   );
