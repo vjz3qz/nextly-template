@@ -102,7 +102,11 @@ export default function Footer() {
                 <span className="sr-only">Instagram</span>
                 <Instagram />
               </a> */}
-              <a href="https://www.linkedin.com/company/trace-ai-co/?viewAsMember=true" target="_blank" rel="noopener">
+              <a
+                href="https://www.linkedin.com/company/trace-ai-co/?viewAsMember=true"
+                target="_blank"
+                rel="noopener"
+              >
                 <span className="sr-only">Linkedin</span>
                 <Linkedin />
               </a>
@@ -111,8 +115,7 @@ export default function Footer() {
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
-          Trace AI
+          Copyright © {new Date().getFullYear()}. Made by Trace AI
         </div>
       </Container>
       {/* Do not remove this */}

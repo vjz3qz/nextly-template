@@ -12,8 +12,8 @@ const Hero = () => {
               AI Copilot for Prior Authorizations
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
-              At Trace AI, we're using cutting-edge generative AI technology to help physcians and medical staff 
-              improve insurance interactions.
+              We use cutting-edge generative AI technology to help physicians
+              and medical staff improve insurance interactions.
             </p>
 
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">

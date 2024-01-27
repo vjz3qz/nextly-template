@@ -31,21 +31,22 @@ const Faq = () => {
       </div>
     </Container>
   );
-}
+};
 
 const faqdata = [
   {
     question: "Do you store patient data?",
-    answer: "We never store any patient data. After we process your request, we delete all records.",
+    answer:
+      "We never store any patient data. After we process your request, we delete all records.",
   },
   {
     question: "Do you cover multiple insurances?",
-    answer: "Yes, our insurance policy knowledge base covers medical policies from the most common insurance providers.",
+    answer:
+      "Yes, our insurance policy knowledge base covers medical policies from the most common insurance providers.",
   },
   {
     question: "Do you offer technical support?",
-    answer:
-      "Yes, a member of our team will be available to support you 7 days a week.",
+    answer: "Yes, a member of our team will be available to support you 24/7.",
   },
 ];
 

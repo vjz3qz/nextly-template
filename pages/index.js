@@ -30,8 +30,8 @@ const Home = () => {
         pretitle="Trace AI"
         title="Use AI to get approvals the first time"
       >
-        Spend less time on paperwork by letting Trace AI handle insurance policy research
-        and medical neccesity write-ups.
+        Spend less time on paperwork by letting Trace AI handle insurance policy
+        research and medical neccesity write-ups.
       </SectionTitle>
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
@@ -52,10 +52,12 @@ const Home = () => {
         Use this section to highlight your popular customers.
       </SectionTitle>
       <Testimonials /> */}
-      <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-      </SectionTitle>
+      <SectionTitle
+        pretitle="FAQ"
+        title="Frequently Asked Questions"
+      ></SectionTitle>
       <Faq />
-      {/* <Cta /> */}
+      <Cta />
       <Footer />
       <PopupWidget />
     </>

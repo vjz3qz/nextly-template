@@ -2,8 +2,10 @@ import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
+  const { theme, setTheme } = useTheme();
   // const navigation = [
   //   "Product",
   //   "Features",
@@ -14,10 +16,10 @@ const Navbar = () => {
 
   const navigation = [
     // "Product",
-    "Features",
+    // "Features",
     // "Pricing",
-    "Demo",
-    "FAQ",
+    // "Demo",
+    // "FAQ",
   ];
 
   return (
@@ -31,13 +33,23 @@ const Navbar = () => {
                 <Link href="/">
                   <span className="flex items-center space-x-2 text-2xl font-medium dark:text-gray-100">
                     <span>
-                      <Image
-                        src="/img/logo.jpeg"
-                        alt="N"
-                        width="48"
-                        height="48"
-                        className="w-8"
-                      />
+                      {theme === "dark" ? (
+                        <Image
+                          src="/img/removed_white.png"
+                          alt="N"
+                          width="48"
+                          height="48"
+                          className="w-8"
+                        />
+                      ) : (
+                        <Image
+                          src="/img/removed_black.png"
+                          alt="N"
+                          width="48"
+                          height="48"
+                          className="w-8"
+                        />
+                      )}
                     </span>
                     <span>Trace AI</span>
                   </span>
@@ -83,7 +95,7 @@ const Navbar = () => {
                       href="/"
                       className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
                     >
-                      Sign up for 
+                      Sign up for
                     </Link>
                   </>
                 </Disclosure.Panel>
@@ -113,7 +125,7 @@ const Navbar = () => {
             href="https://calendly.com/rahulkm-s7s"
             className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
           >
-            Sign up for a demo
+            Book a Demo Today
           </Link>
 
           <ThemeChanger />
