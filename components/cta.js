@@ -15,7 +15,7 @@ const Cta = () => {
 
     console.log(email);
     // add email to email list
-    const url = process.env.VITE_EMAIL_LINK;
+    const url = process.env.EMAIL_LINK;
 
     jsonp(`${url}&EMAIL=${email}`, { param: "c" }, (_, data) => {
       const { msg } = data;
