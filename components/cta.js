@@ -1,29 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "./container";
 
-import jsonp from "jsonp";
-
 const Cta = () => {
-  const [email, setEmail] = React.useState("");
-  const [submitStatus, setSubmitStatus] = React.useState(false);
+  const [email, setEmail] = useState("");
+  const [submitStatus, setSubmitStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
-    if (email === "") {
-      return;
-    }
 
-    console.log(email);
-    // add email to email list
-    const url = process.env.EMAIL_LINK;
+    // Target API URL with JSONP support
+    const url = "https://berkeley.us21.list-manage.com/subscribe/post?u=17f7ae73ce524dad276054d2e&amp;id=44fc0f54e1&amp;f_id=00acf3e6f0";
 
-    jsonp(`${url}&EMAIL=${email}`, { param: "c" }, (_, data) => {
-      const { msg } = data;
-      // do something with response
+    // Create a script element to make the JSONP request
+    const script = document.createElement('script');
+    script.src = `${url}&EMAIL=${email}&callback=handleResponse`;
+    document.head.appendChild(script);
+
+    // Define the callback function to handle the JSONP response
+    window.handleResponse = (data) => {
+      const { msg, result } = data;
+      // Do something with the response
       alert(msg);
-    });
-    setEmail("");
-    setSubmitStatus(true);
+
+      // Remove the script element after processing the response
+      document.head.removeChild(script);
+      delete window.handleResponse;
+    };
   };
 
   return (
@@ -38,24 +41,23 @@ const Cta = () => {
           </p>
         </div>
         <div className="flex-shrink-0 w-full text-center lg:w-auto">
-          <input
-            type="email"
-            className="form-input bg-white px-4 py-3 sm:mr-2 text-gray-500 text-lg placeholder-gray-500 rounded-md"
-            placeholder="Your email…"
-            aria-label="Your email…"
-            onChange={(ev) => {
-              setEmail(ev.target.value);
-            }}
-          />
-        </div>
-        <div className="flex-shrink-0 w-full text-center lg:w-auto">
-          <button
-            type="submit"
-            className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-4"
-            onClick={handleSubmit} // Add onClick event handler
-          >
-            {submitStatus ? "Subscribed!" : "Subscribe"}
-          </button>
+          <form onSubmit={onSubmit}>
+            <input
+              type="email"
+              className="form-input bg-white px-4 py-3 sm:mr-2 text-gray-500 text-lg placeholder-gray-500 rounded-md"
+              placeholder="Your email…"
+              aria-label="Your email…"
+              value={email}
+              onChange={(ev) => setEmail(ev.target.value)}
+            />
+            <button
+              type="submit"
+              className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-4"
+              disabled={loading}
+            >
+              {loading ? "Subscribing..." : submitStatus || "Subscribe"}
+            </button>
+          </form>
         </div>
       </div>
     </Container>
