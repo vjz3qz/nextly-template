@@ -4,10 +4,12 @@ import Container from "./container";
 const Cta = () => {
   const [email, setEmail] = useState("");
   const [submitStatus, setSubmitStatus] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
     setSubmitStatus(false);
+    setLoading(true);
 
     // add email to email list
     const url = process.env.NEXT_PUBLIC_EMAIL_URL;
@@ -29,6 +31,7 @@ const Cta = () => {
     };
     setSubmitStatus(true);
     setEmail("");
+    setLoading(false);
   };
 
   return (
