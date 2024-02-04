@@ -9,11 +9,12 @@ const Cta = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    // Target API URL with JSONP support
-    const url = "https://berkeley.us21.list-manage.com/subscribe/post?u=17f7ae73ce524dad276054d2e&amp;id=44fc0f54e1&amp;f_id=00acf3e6f0";
+    console.log(email);
+    // add email to email list
+    const url = process.env.NEXT_PUBLIC_EMAIL_URL;
 
     // Create a script element to make the JSONP request
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.src = `${url}&EMAIL=${email}&callback=handleResponse`;
     document.head.appendChild(script);
 
