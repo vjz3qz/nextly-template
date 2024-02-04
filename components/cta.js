@@ -3,13 +3,12 @@ import Container from "./container";
 
 const Cta = () => {
   const [email, setEmail] = useState("");
-  const [submitStatus, setSubmitStatus] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
+    setSubmitStatus(false);
 
-    console.log(email);
     // add email to email list
     const url = process.env.NEXT_PUBLIC_EMAIL_URL;
 
@@ -28,6 +27,8 @@ const Cta = () => {
       document.head.removeChild(script);
       delete window.handleResponse;
     };
+    setSubmitStatus(true);
+    setEmail("");
   };
 
   return (
@@ -56,7 +57,7 @@ const Cta = () => {
               className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-4"
               disabled={loading}
             >
-              {loading ? "Subscribing..." : submitStatus || "Subscribe"}
+              {submitStatus ? "Subscribed!" : "Subscribe"}
             </button>
           </form>
         </div>
